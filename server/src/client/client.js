@@ -1,4 +1,5 @@
 //startup point for client application
+import "babel-polyfill";
 import React from "react";
 import ReactDom from "react-dom";
 import { createStore, applyMiddleware } from "redux";
