@@ -39634,6 +39634,10 @@ var _App = __webpack_require__(484);
 
 var _App2 = _interopRequireDefault(_App);
 
+var _NotFoundPage = __webpack_require__(487);
+
+var _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = [_extends({}, _App2.default, {
@@ -39643,7 +39647,9 @@ exports.default = [_extends({}, _App2.default, {
 	}), _extends({}, _UsersListPage2.default, {
 		path: "/users",
 		exact: true
-	})]
+	}), {
+		component: _NotFoundPage2.default
+	}]
 })];
 
 /***/ }),
@@ -39976,6 +39982,31 @@ exports.default = function () {
 		default:
 			return state;
 	}
+};
+
+/***/ }),
+/* 487 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+	return _react2.default.createElement(
+		"div",
+		null,
+		" Oops.. Page Not Found "
+	);
 };
 
 /***/ })
