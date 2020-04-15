@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Helmet } from "react-helmet";
 import { fetchAdmins } from "../actions";
 import requireAuth from "../components/hocs/requireAuth";
 
@@ -12,9 +13,17 @@ class AdminsListPage extends Component {
 			return <li key={admin.id}>{admin.name}</li>;
 		});
 	}
+	head() {
+		return (
+			<Helmet>
+				<title>Admins Page</title>
+			</Helmet>
+		);
+	}
 	render() {
 		return (
 			<div>
+				{this.head()}
 				<h3>Admins:</h3>
 				<ul>{this.renderAdmins()}</ul>
 			</div>
